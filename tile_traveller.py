@@ -24,12 +24,13 @@ def move_w(x, y):
 def nav(n, e, s, w):
 	choice = input("Direction: ")
 	if n and choice == "n" or choice == "N":
-		y += 1
+		return move_n(x, y)
 	if e and choice == "e" or choice == "N":
-		x += 1
+		return move_e(x, y)
 	if s and choice == "s" or choice == "S":
-		y -= 1
+		return move_s(x, y)
 	if w and choice == "w" or choice == "W":
+		return move_w(x, y)
 
 
 def options(x, y):
@@ -83,6 +84,7 @@ def options(x, y):
 		South = True
 		print("You can travel: (S)outh or (W)est.")
 		return North, East, South, West
+
 
 x = 1
 y = 1
