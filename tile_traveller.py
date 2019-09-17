@@ -6,31 +6,36 @@
 5. Búa til while loopu-sem keyrir á meðan notandi er ekki búinn að vinna
 '''
 def move_n(x, y):
-	y += 1
+	y = y + 1
 	return x, y
 
 def move_e(x, y):
-	x += 1
+	x = x+ 1
 	return x, y
 
 def move_s(x, y):
-	y -= 1
+	y = y- 1
 	return x, y
 
 def move_w(x, y):
-	x -= 1
+	x = x- 1
 	return x, y
 
 def nav(n, e, s, w):
-	choice = input("Direction: ")
-	if n and choice == "n" or choice == "N":
-		return move_n(x, y)
-	if e and choice == "e" or choice == "N":
-		return move_e(x, y)
-	if s and choice == "s" or choice == "S":
-		return move_s(x, y)
-	if w and choice == "w" or choice == "W":
-		return move_w(x, y)
+	m = 1
+	while m != 0:
+		choice = input("Direction: ")
+		
+		if n and choice == "n" or choice == "N":
+			return move_n(x, y)
+		elif e and choice == "e" or choice == "N":
+			return move_e(x, y)
+		elif s and choice == "s" or choice == "S":
+			return move_s(x, y)
+		elif w and choice == "w" or choice == "W":
+			return move_w(x, y)
+		else:
+			print("Not a valid direction!")
 
 
 def options(x, y):
@@ -85,10 +90,14 @@ def options(x, y):
 		print("You can travel: (S)outh or (W)est.")
 		return North, East, South, West
 
-
 x = 1
 y = 1
 win_state = False
 while win_state == False:
-north, east, south, west = options(x,y)
-print(nav(north, east, south, west))
+	
+	north, east, south, west = options(x,y)
+	x, y = nav(north, east, south, west)
+	if x == 3 and y == 1:
+		win_state = True
+
+print("Victory!")
