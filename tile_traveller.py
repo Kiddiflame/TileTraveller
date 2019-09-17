@@ -6,3 +6,16 @@
 5. Búa til while loopu-sem keyrir á meðan notandi er ekki búinn að vinna
 '''
 
+def nav(x, y, z):
+    return 0
+
+def options(x, y):
+    
+    return 0
+
+
+x = 1
+y = 1
+
+while x != 3 and y != 1:
+    
