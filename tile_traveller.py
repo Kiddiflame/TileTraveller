@@ -88,7 +88,6 @@ def options(x, y):
 
 x = 1
 y = 1
-
-while x != 3 and y != 1:
-	options(x, y)
-	print(nav(options))
+win_state = False
+while win_state == False:
+	print(nav(options(x, y)))
