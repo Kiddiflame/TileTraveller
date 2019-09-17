@@ -29,7 +29,7 @@ def nav(n, e, s, w):
 		
 		if n and choice == "n" or choice == "N":
 			return move_n(x, y)
-		elif e and choice == "e" or choice == "N":
+		elif e and choice == "e" or choice == "E":
 			return move_e(x, y)
 		elif s and choice == "s" or choice == "S":
 			return move_s(x, y)
