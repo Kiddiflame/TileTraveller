@@ -5,6 +5,7 @@
 4. Búa til if og else clause sem kemur í veg fyrir error-a
 5. Búa til while loopu-sem keyrir á meðan notandi er ekki búinn að vinna
 '''
+#https://github.com/Kiddiflame/TileTraveller
 def move_n(x, y):
 	y = y + 1
 	return x, y
