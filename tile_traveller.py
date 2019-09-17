@@ -90,4 +90,5 @@ x = 1
 y = 1
 win_state = False
 while win_state == False:
-	print(nav(options(x, y)))
+north, east, south, west = options(x,y)
+print(nav(north, east, south, west))
