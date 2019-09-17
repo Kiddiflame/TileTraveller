@@ -10,12 +10,10 @@ def nav(x, y, z):
     return 0
 
 def options(x, y):
-    
-    return 0
 
+    return 0
 
 x = 1
 y = 1
 
 while x != 3 and y != 1:
-    
