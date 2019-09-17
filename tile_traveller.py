@@ -17,43 +17,49 @@ def options(x, y):
 	
 	if x == 1 and y == 1:
 		North = True
+		print("You can travel: (N)orth.")
 		return North
 	elif x == 1 and y == 2:
 		North = True
 		South = True
 		East = True
+		print("You can travel: (N)orth or (E)ast or (S)outh.")
 		return North, South, East
 		
 	elif x == 1 and y == 3:
 		South = True
 		East = True
+		print("You can travel: (E)ast or (S)outh.")
 		return South, East
 		
 	elif x == 2 and y == 1:
 		North = True
+		print("You can travel: (N)orth.")
 		return North
 		
 	elif x == 2 and y == 2:
 		West = True
 		South = True
+		print("You can travel: (S)outh or (W)est.")
 		return West, South
 	
 	elif x == 2 and y == 3:
 		West = True
 		East = True
+		print("You can travel: (E)ast or (W)est.")
 		return West, East
 	
 	elif x == 3 and y == 2:
 		North = True
 		South = True
+		print("You can travel: (N)orth or (S)outh.")
 		return North, South
 		
 	elif x == 3 and y == 3:
 		West = True
 		South = True
+		print("You can travel: (S)outh or (W)est.")
 		return West, South
-
-    return 0
 
 x = 1
 y = 1
