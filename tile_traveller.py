@@ -5,9 +5,32 @@
 4. Búa til if og else clause sem kemur í veg fyrir error-a
 5. Búa til while loopu-sem keyrir á meðan notandi er ekki búinn að vinna
 '''
+def move_n(x, y):
+	y += 1
+	return x, y
 
-def nav(x, y, z):
-    return 0
+def move_e(x, y):
+	x += 1
+	return x, y
+
+def move_s(x, y):
+	y -= 1
+	return x, y
+
+def move_w(x, y):
+	x -= 1
+	return x, y
+
+def nav(n, e, s, w):
+	choice = input("Direction: ")
+	if n and choice == "n" or choice == "N":
+		y += 1
+	if e and choice == "e" or choice == "N":
+		x += 1
+	if s and choice == "s" or choice == "S":
+		y -= 1
+	if w and choice == "w" or choice == "W":
+
 
 def options(x, y):
 	North = False
@@ -18,48 +41,48 @@ def options(x, y):
 	if x == 1 and y == 1:
 		North = True
 		print("You can travel: (N)orth.")
-		return North
+		return North, East, South, West
 	elif x == 1 and y == 2:
 		North = True
 		South = True
 		East = True
 		print("You can travel: (N)orth or (E)ast or (S)outh.")
-		return North, South, East
+		return North, East, South, West
 		
 	elif x == 1 and y == 3:
 		South = True
 		East = True
 		print("You can travel: (E)ast or (S)outh.")
-		return South, East
+		return North, East, South, West
 		
 	elif x == 2 and y == 1:
 		North = True
 		print("You can travel: (N)orth.")
-		return North
+		return North, East, South, West
 		
 	elif x == 2 and y == 2:
 		West = True
 		South = True
 		print("You can travel: (S)outh or (W)est.")
-		return West, South
+		return North, East, South, West
 	
 	elif x == 2 and y == 3:
 		West = True
 		East = True
 		print("You can travel: (E)ast or (W)est.")
-		return West, East
+		return North, East, South, West
 	
 	elif x == 3 and y == 2:
 		North = True
 		South = True
 		print("You can travel: (N)orth or (S)outh.")
-		return North, South
+		return North, East, South, West
 		
 	elif x == 3 and y == 3:
 		West = True
 		South = True
 		print("You can travel: (S)outh or (W)est.")
-		return West, South
+		return North, East, South, West
 
 x = 1
 y = 1
